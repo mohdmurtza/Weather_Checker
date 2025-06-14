@@ -12,7 +12,7 @@ def index(request):
             "country_code":str(json_data['sys']['country']),
             "coordinate": str(json_data['coord']['lon'])+' ' +
                 str(json_data['coord']['lat']),
-            "temp": str(json_data['main']['temp'])+'k',
+            "temp": f"{int(json_data['main']['temp'])-int(273)} C",
             "pressure": str(json_data['main']['pressure']),
             "humidity": str(json_data['main']['humidity']),
         }
